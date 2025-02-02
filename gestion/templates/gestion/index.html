@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestion des Enseignements</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'gestion/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestion des Enseignements, Classes, Salles et Matériel Pédagogique</h1>
+        <h2>Salles</h2>
+        <ul>
+            {% for salle in salles %}
+                <li>{{ salle.nom }} ({{ salle.type_salle }}) - Capacité : {{ salle.capacite }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Matériel Pédagogique</h2>
+        <ul>
+            {% for materiel in materiels %}
+                <li>{{ materiel.nom }} - Quantité : {{ materiel.quantite }} (Salle : {{ materiel.salle.nom }})</li>
+            {% endfor %}
+        </ul>
+        <h2>Classes</h2>
+        <ul>
+            {% for classe in classes %}
+                <li>{{ classe.nom }} (Salle : {{ classe.salle.nom }})</li>
+            {% endfor %}
+        </ul>
+        <h2>Enseignants</h2>
+        <ul>
+            {% for enseignant in enseignants %}
+                <li>{{ enseignant.nom }} {{ enseignant.prenom }} - Email : {{ enseignant.email }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Cours</h2>
+        <ul>
+            {% for cours in cours %}
+                <li>Classe : {{ cours.classe.nom }} - Enseignant : {{ cours.enseignant.nom }} {{ cours.enseignant.prenom }} - Date : {{ cours.date }} - Heure : {{ cours.heure_debut }} à {{ cours.heure_fin }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
