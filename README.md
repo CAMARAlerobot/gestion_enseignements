@@ -3,7 +3,9 @@ Projet : Gestion des matériels universitaires – Université Nangui Abrogoua
 Description
 
 Ce projet consiste à développer une application web pour la gestion des matériels et infrastructures 
-de l’Université Nangui Abrogoua. L’objectif est de faciliter le suivi et l’organisation des ressources 
+de l’Université Nangui Abrogoua. 
+
+L’objectif est de faciliter le suivi et l’organisation des ressources 
 disponibles dans l’université, telles que :
 
     Les salles de cours et de soutenance
